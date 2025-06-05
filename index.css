@@ -1,0 +1,154 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace; /* Retro typewriter-style font */
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Section */
+#header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#game-theory-announcement {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ffcc00; /* Retro yellow */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#description {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-style: italic;
+    color: #ff6f00; /* Retro orange */
+}
+
+/* Navigation Bar */
+.nav-bar {
+    margin-top: 20px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-bar ul li {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #ff6f00; /* Retro orange */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #ffcc00; /* Retro yellow */
+    color: #333;
+}
+
+/* Game Theory Image Section */
+#game-theory-image {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#game-theory-age {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #666;
+}
+
+#game-theory-origin {
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Game Theory Examples Section */
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.gift-section {
+    background-color: #fff;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gift-section:hover {
+    transform: translateY(-10px);
+}
+
+.game-theory-wishes {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6f00; /* Retro orange */
+    margin-bottom: 15px;
+}
+
+.gift-hint {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.gift-img {
+    background-color: #eee;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+#footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #ff6f00;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+#footer a:hover {
+    color: #ffcc00;
+}

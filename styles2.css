@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #25005c, #4b0073);
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: transparent;
+}
+
+.logo {
+  font-weight: bold;
+  color: #d946ef;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #d946ef;
+}
+
+.auth-search a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.btn.solid {
+  background-color: #d946ef;
+  color: white;
+  border: none;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #d946ef;
+  color: #d946ef;
+}
+
+.hero-image img {
+  max-width: 550px;
+  height: auto;
+}

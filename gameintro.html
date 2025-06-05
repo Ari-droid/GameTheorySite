@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to Game Theory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: white;
+      color: black;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+      image-rendering: pixelated;
+      text-shadow:
+        0 0 0 black,
+        1px 0 0 black,
+        0 1px 0 black,
+        1px 1px 0 black;
+        user-select: none;
+        background-image: url(assets/img/5concepts.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+            
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+    }
+
+    a:hover {
+      color: white;
+      background: black;
+      border-bottom: 1px solid white;
+    }
+
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      background: repeating-linear-gradient(45deg, black, black 10px, #222 10px, #222 20px);
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      font-size: 10px;
+      border-right: 2px solid white;
+    }
+
+    .side-nav a {
+      padding: 10px 10px 10px 20px;
+      font-size: 12px;
+      color: white;
+      display: block;
+      border-bottom: 1px solid white;
+    }
+
+    .side-nav a:hover {
+      background: white;
+      color: black;
+    }
+
+    .side-nav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 36px;
+      color: white;
+      cursor: pointer;
+    }
+
+    #main {
+      transition: margin-left 0.5s;
+      padding: 16px;
+      filter: contrast(150%) brightness(90%);
+    }
+
+    .open-nav-btn {
+      font-size: 12px;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      padding: 8px 12px;
+      border: 2px solid white;
+      box-shadow: 2px 2px 0 black;
+    }
+
+    .open-nav-btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+    h1, h2, h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: 18px;
+      border-bottom: 3px double black;
+      padding-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 14px;
+      border-left: 6px solid black;
+      padding-left: 8px;
+    }
+
+    h3 {
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+
+    #game-theory-image {
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto 30px auto;
+      filter: grayscale(100%) contrast(200%);
+      border: 2px solid black;
+      background: white;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .gift-section, .game-theory-section {
+      background: #f8f8f8;
+      border: 2px dashed black;
+      padding: 12px;
+      margin: 20px 0;
+      box-shadow: 4px 4px 0 black;
+    }
+
+    #footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 10px;
+      border-top: 2px solid black;
+      margin-top: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 10px;
+      }
+
+      .open-nav-btn {
+        width: 100%;
+        padding: 10px;
+      }
+
+      #game-theory-image {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mySidenav" class="side-nav">
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="#profile-overview">Overview</a>
+    <a href="#profile-key-theorists">Key Theorists</a>
+    <a href="#profile-case-studies">Case Studies</a>
+    <a href="#profile-impact">Impact & Legacy</a>
+    <a href="index.html">Home</a>
+  </div>
+
+  <div id="main" class="container">
+    <button class="open-nav-btn" onclick="openNav()">&#9776; Open Sidebar</button>
+
+    <h1>Welcome to Game Theory 101</h1>
+    <h2>Understanding Strategy, Choices, and Decision-Making</h2>
+
+    <div class="game-theory-section">
+      <h2>A Concept Over 70 Years Old</h2>
+      <h3>Originated in the 1940s with John von Neumann & Oskar Morgenstern</h3>
+      <p>Game theory began as a mathematical exploration of strategic behavior in competitive environments. In 1944, John von Neumann and economist Oskar Morgenstern published "Theory of Games and Economic Behavior," a foundational text that formalized the field. Their work examined how rational players should act when their choices depend on the actions of others.</p>
+      <img src="assets/img/Oskar_Morgenstern1.jpg" alt="Oscar">
+      <img src="assets/img/JohnvonNeumann-LosAlamos.gif" alt="John" style="width: 100%; max-width: 150px;">
+    </div>
+
+    <div class="gift-section">
+      <h2>The Prisoner's Dilemma: The Classic Game</h2>
+      <p>The Prisoner's Dilemma reveals how two individuals acting in their own self-interest may lead to worse outcomes than if they cooperated. Two prisoners are offered a deal: betray the other and go free while the other serves time, or stay silent and risk a harsher sentence. The paradox? Mutual betrayal is the rational strategy, but mutual cooperation would benefit both more.</p>
+      <img src="assets/img/strat.png" alt="strategy" style="width: 100%; max-width: 300px;">
+      <img src="assets/img/The_Prisoner_s_Dilemma.gif" alt="PD">
+    </div>
+
+    <div class="gift-section">
+      <h2>The Ultimatum Game: Fairness in Action</h2>
+      <p>In this game, one player proposes how to divide a sum of money; the other can accept or reject the offer. If rejected, both get nothing. While rational choice predicts accepting any non-zero offer, in practice, unfair proposals are often rejected. The game highlights how fairness, emotion, and social norms affect decision-making.</p>
+      <img src="assets/img/Screenshot 2025-05-15 222807.PNG" alt="" style="width: 100%; max-width: 300px;">
+    </div>
+
+    <div class="gift-section">
+      <h2>The Nash Equilibrium: The Balance of Strategy</h2>
+      <p>Named after mathematician John Nash, a Nash Equilibrium occurs when no player can benefit by changing their strategy while others keep theirs unchanged. It represents a stable state in strategic games and is fundamental in economics, politics, and even biology. Not all games have a single Nash Equilibrium, and some have none in pure strategies.</p>
+      <img src="assets/img/images.png" alt="">
+    </div>
+
+    <div class="gift-section">
+      <h2 id="profile-overview">Overview</h2>
+      <p>Game theory is the study of strategic interaction among rational decision-makers. It provides tools to analyze situations where outcomes depend on the actions of multiple agents. Used in economics, biology, politics, and computer science, game theory helps explain and predict behavior in competitive and cooperative settings.</p>
+
+      <h2 id="profile-key-theorists">Key Theorists</h2>
+      <p>
+        <strong>John von Neumann</strong>: Founder of game theory, co-author of its first formal text.<br>
+        <strong>Oskar Morgenstern</strong>: Economist and von Neumann’s collaborator.<br>
+        <strong>John Nash</strong>: Introduced the Nash Equilibrium, expanding the field to non-zero-sum games.<br>
+        <strong>Thomas Schelling</strong>: Explored conflict and cooperation in Cold War strategy.<br>
+        <strong>Robert Aumann</strong>: Contributed to repeated games and the concept of correlated equilibrium.
+      </p>
+
+      <h2 id="profile-case-studies">Case Studies</h2>
+      <p>
+        <strong>Cold War Deterrence:</strong> Game theory informed U.S. and Soviet strategies of mutually assured destruction.<br>
+        <strong>Auction Design:</strong> Economists used game theory to design spectrum auctions, maximizing efficiency and revenue.<br>
+        <strong>Biological Evolution:</strong> Strategies like altruism and aggression have been modeled using evolutionary game theory.<br>
+        <strong>Market Competition:</strong> Firms use game-theoretic models to anticipate competitors' pricing and output decisions.
+      </p>
+
+      <h2 id="profile-impact">Impact & Legacy</h2>
+      <p>Game theory has transformed economics and spread into many disciplines. It underpins modern economic theory, international diplomacy, behavioral psychology, and even artificial intelligence. With Nobel Prizes awarded to its pioneers, game theory continues to shape how we understand conflict, cooperation, and strategic thinking.</p>
+    </div>
+
+    <p id="footer">
+      Want to dive deeper into Game Theory?<br>
+      <a href="https://www.coursera.org/learn/game-theory" target="_blank">Take an Intro to Game Theory course</a>
+    </p>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById('mySidenav').style.width = '250px';
+      document.getElementById('main').style.marginLeft = '250px';
+    }
+
+    function closeNav() {
+      document.getElementById('mySidenav').style.width = '0';
+      document.getElementById('main').style.marginLeft = '0';
+    }
+  </script>
+</body>
+</html>
